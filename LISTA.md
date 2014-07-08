@@ -7,7 +7,8 @@ Rodolfo Dias
         ((3+1)/3)*6 = 8
 
 
-3. 
+2.
+ 
         unsigned int 1;
         for(i = 100; i <= 0; --i)
           prinf('%d/n', i)
