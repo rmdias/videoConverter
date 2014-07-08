@@ -18,6 +18,15 @@ A NodeJS project
 * [SASS](http://sass-lang.com/)
 * [AngularJS](https://angularjs.org/)
 
+## Justificativa pela escolha:
+  
+Achei que seria mais interessante trabalhar na conversão do vídeo ultilizando NodeJS. Tentei prezar pela performance e desempenho maior da aplicação.
+
+<br> <br>
+
+Infelizmente tive um problema pequeno problema com a configuracão do FFMPEG no meu servidor, por conta disso é preciso instalar o serviço do FFMPEG local ( O link e o guia de instalação pode ser encontrado na lista acima ).
+
+<br> <br>
 
 ## Para testar:
 
@@ -31,7 +40,7 @@ A NodeJS project
 
         npm install
 
-4. Instale as dependencias do projeto:
+4. Rode o NodeJS:
 
         node app.js
 
@@ -60,7 +69,9 @@ Os arquivos do projeto estão organizados da seguinte forma:
 
 
 
+## Retorno com lista de vídeos do MongoDB:
 
+        http://rmdias.com:3000/listVideos
 
 
 
