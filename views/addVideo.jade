@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  div(ng-app="fileUploaderApp")
+    .row(data-ng-controller="fileUploaderController" ng-file-drop)
+      .col-md-3
+        h3 Select files
+        div(ng-show='uploader.isHTML5')
+          .well.my-drop-zone(ng-file-over='ng-file-over')
+            | Base drop zone
+        | Multiple
+        input(ng-file-select='ng-file-select', type='file', multiple='multiple')
+        br
+        | Single
+        input(ng-file-select='ng-file-select', type='file')
+      .col-md-9(style='margin-bottom: 40px;')
+        h3 Upload videos
+        p Videos length: {{ uploader.queue.length }}
+        table.table
+          thead
+            tr
+              th(width='50%') Name
+              th(ng-show='uploader.isHTML5') Size
+              th(ng-show='uploader.isHTML5') Progress
+              th Status
+              th Actions
+          tbody
+            tr(ng-repeat='item in uploader.queue')
+              td
+                strong {{ item.file.name }}
+              td(ng-show='uploader.isHTML5', nowrap='nowrap') {{ item.file.size/1024/1024|number:2 }} MB
+              td(ng-show='uploader.isHTML5')
+                .progress(style='margin-bottom: 0;')
+                  .progress-bar(role='progressbar', ng-style='{ \'width\': item.progress + \'%\' }')
+              td.text-center
+                span(ng-show='item.isSuccess')
+                  i.glyphicon.glyphicon-ok
+                span(ng-show='item.isCancel')
+                  i.glyphicon.glyphicon-ban-circle
+                span(ng-show='item.isError')
+                  i.glyphicon.glyphicon-remove
+              td(nowrap='nowrap')
+                button.option-buttons.btn.btn-success.btn-xs(type='button', ng-click='item.upload()', ng-disabled='item.isReady || item.isUploading || item.isSuccess')
+                  span.glyphicon.glyphicon-upload
+                  | Upload
+                button.option-buttons.btn.btn-warning.btn-xs(type='button', ng-click='item.cancel()', ng-disabled='!item.isUploading')
+                  span.glyphicon.glyphicon-ban-circle
+                  | Cancel
+                button.option-buttons.btn.btn-danger.btn-xs(type='button', ng-click='item.remove()')
+                  span.glyphicon.glyphicon-trash
+                  | Remove
+        div
+          p
+            | Upload progress:
+            .progress(style='')
+              .progress-bar(role='progressbar', ng-style='{ \'width\': uploader.progress + \'%\' }')
+          button.option-buttons.btn.btn-success.btn-s(type='button', ng-click='uploader.uploadAll()', ng-disabled='!uploader.getNotUploadedItems().length')
+            span.glyphicon.glyphicon-upload
+            | Upload all
+          button.option-buttons.btn.btn-warning.btn-s(type='button', ng-click='uploader.cancelAll()', ng-disabled='!uploader.isUploading')
+            span.glyphicon.glyphicon-ban-circle
+            | Cancel all
+          button.option-buttons.btn.btn-danger.btn-s(type='button', ng-click='uploader.clearQueue()', ng-disabled='!uploader.queue.length')
+            span.glyphicon.glyphicon-trash
+            | Remove all

@@ -1,0 +1,23 @@
+{
+  "name": "Video-Converter",
+  "version": "0.0.1",
+  "author": "Rodolfo Dias",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "fluent-ffmpeg": "~1.7",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "gulp-util": "~2.2.9",
+    "gulp-uglify": "^0.2.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-ruby-sass": "^0.4.0",
+    "map-stream": "~0.1.0",
+    "gulp": "^3.6.0",
+    "gulp-sitemap": "^0.1.3"
+  }
+}

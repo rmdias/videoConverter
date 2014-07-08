@@ -1,0 +1,40 @@
+doctype
+html.no-js(lang='en', data-ng-app)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title= title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='stylesheets/app.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+  body
+    header.app-header
+      nav.app-navbar.navbar.navbar-inverse(role='navigation')
+        .container
+          a.logo(href='/')
+            h1= title
+            span Welcome to #{title}
+
+          ul.nav.navbar-nav.navbar-right.actions-button
+            .btn-group
+              a.btn.btn-danger(href="#", type='button') Actions
+                a.btn.btn-danger.dropdown-toggle(href="", type='button', data-toggle='dropdown')
+                  span.caret
+                  span.sr-only Toggle Dropdown
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='/addVideo') Add a video
+                  li.divider
+                  li
+                    a(href='/') List all videos
+
+    main.container.app-container(data-ng-view)
+      block content
+
+  script(src="javascripts/jquery-1.11.0.min.js")
+  script(src="javascripts/bootstrap.min.js")
+  script(src="javascripts/angular.min.js")
+  script(src='javascripts/angular-file-upload.js')
+  script(src='javascripts/controllers.js')
+  script(src='javascripts/fileUploader-controller.js')

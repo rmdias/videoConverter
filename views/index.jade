@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(data-ng-controller="listVideos")
+    ul.row
+
+
+      li(data-ng-repeat="object in videos").col-sm-6.col-md-4
+        .thumbnail
+          video(controls)
+            source(src="{{object.video.path.mp4}}" type="video/mp4")
+            source(src= "{{object.video.path.ogg}}" type="video/ogg")
+          .caption
+            h2="{{object.video.title}}"
+
+            p="{{object.video.description}}"
+            p
+              span.label.label-warning Download
+              a.btn.btn-info(href="{{object.video.path.mp4}}", role='button', download) MP4
+              a.btn.btn-info(href="{{object.video.path.ogg}}", role='button', download) OGG
