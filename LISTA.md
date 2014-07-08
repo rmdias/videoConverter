@@ -7,7 +7,7 @@ Rodolfo Dias
         ((3+1)/3)*6 = 8
 
 
-2.
+3 ( Questão ).
  
         unsigned int 1;
         for(i = 100; i <= 0; --i)
