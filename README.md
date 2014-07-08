@@ -31,6 +31,11 @@ Infelizmente tive um problema pequeno problema com a configuracão do FFMPEG no 
 * Se nescessário, posso ir até a @Samba para demonstrar a aplicação rodando em meu servidor local sem nenhum problema :)
 
 
+## Compatibilidade:
+
+É possível fazer o upload e a conversão de diversos tipos de vídeo sem nenhum problema, o FFMPEG suporta váááááááários formatos. Para o exemplo fiz o upload de um vídeo .MOV, mas com a aplicação rodando você pode mandar qualquer tipo de arquivo, inclusive o .DV solicitado.
+
+
 ## Para testar:
 
 1. Clone este repositório:
@@ -46,6 +51,8 @@ Infelizmente tive um problema pequeno problema com a configuracão do FFMPEG no 
 4. Rode o NodeJS:
 
         node app.js
+
+5. A aplicação está rodando em `localhost:3000`
 
 
 ## Estrutura do projeto
@@ -70,9 +77,7 @@ Os arquivos do projeto estão organizados da seguinte forma:
 |--gulpfile.js
 </pre>
 
-
-
-## Retorno com lista de vídeos do MongoDB:
+## Precisa implementar os vídeos em algum serviço?
 
         http://rmdias.com:3000/listVideos
 
