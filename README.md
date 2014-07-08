@@ -22,11 +22,14 @@ A NodeJS project
   
 Achei que seria mais interessante trabalhar na conversão do vídeo ultilizando NodeJS. Tentei prezar pela performance e desempenho maior da aplicação.
 
-<br> <br>
+<br>
 
-Infelizmente tive um problema pequeno problema com a configuracão do FFMPEG no meu servidor, por conta disso é preciso instalar o serviço do FFMPEG local ( O link e o guia de instalação pode ser encontrado na lista acima ).
+Infelizmente tive um problema pequeno problema com a configuracão do FFMPEG no meu servidor (Acabei instalando uma versão que logo será depreciada). Por esse motive é preciso instalar o serviço do FFMPEG local ( O link e o guia de instalação pode ser encontrado na lista acima ).
 
-<br> <br>
+<br>
+
+* Se nescessário, posso ir até a @Samba para demonstrar a aplicação rodando em meu servidor local sem nenhum problema :)
+
 
 ## Para testar:
 
