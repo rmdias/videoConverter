@@ -9,14 +9,14 @@ A NodeJS project
 
 ## Este projeto usa:
 
-* [FFMPEG - Para a conversão dos vídeos](https://npmjs.org/package/gulp-concat)
-* [MongoDB](https://github.com/h5bp/html5-boilerplate)
-* [NodeJS](https://github.com/h5bp/html5-boilerplate)
-* [Jade](https://npmjs.org/package/gulp-minify-html)
-* [Express](https://github.com/h5bp/html5-boilerplate)
-* [Gulp Web App Workflow](https://npmjs.org/package/gulp-imagemin)
-* [Sass](https://npmjs.org/package/gulp-ruby-sass)
-* [AngularJS](https://npmjs.org/package/gulp-uglify)
+* [FFMPEG - Para a conversão dos vídeos](https://www.ffmpeg.org/)
+* [MongoDB](http://www.mongodb.org/)
+* [NodeJS](http://nodejs.org/)
+* [Jade](http://jade-lang.com/)
+* [Express](http://expressjs.com/)
+* [Gulp Web App Workflow](http://rmdias.com/gulpworkflow)
+* [SASS](http://sass-lang.com/)
+* [AngularJS](https://angularjs.org/)
 
 
 ## Para testar:
